@@ -8,7 +8,7 @@ from sprites.explosion import Exlosion
 from sprites.vidas import Vidas
 from sprites.boton import Boton
 import random
-
+import os
 
 
 
@@ -19,7 +19,8 @@ class Juego():
         self.FPS = pygame.time.Clock()
 
         pygame.display.set_caption("Space Game")
-        pygame.display.set_icon(pygame.image.load("./assets/Icono.ico"))
+        ruta_icono = os.path.join(os.path.dirname(__file__), "assets", "Icono.ico")
+        pygame.display.set_icon(pygame.image.load(ruta_icono))
 
         self.estado_juego = "Menu" # va a tener estado Menu,Jugar,GameOver
         self.ANCHO_VENTANA, self.ALTO_VENTANA = 800, 600
