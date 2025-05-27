@@ -18,6 +18,9 @@ class Juego():
         pygame.mixer.init()
         self.FPS = pygame.time.Clock()
 
+        pygame.display.set_caption("Space Game")
+        pygame.display.set_icon(pygame.image.load("./assets/Icono.ico"))
+
         self.estado_juego = "Menu" # va a tener estado Menu,Jugar,GameOver
         self.ANCHO_VENTANA, self.ALTO_VENTANA = 800, 600
         self.velocidad_fondo = .5
